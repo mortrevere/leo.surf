@@ -1,0 +1,55 @@
+/o/ call page_shell("cv") \o\
+
+    <main class="site-main" aria-label="Main content">
+      /o/ set cv = _o_["load_yaml"]("cv-fr.yaml")["cv"] \o\
+      <article class="cv-page">
+        <header class="cv-hero">
+          <h1>\o/ cv["name"] \o/</h1>
+          <aside class="cv-contact" aria-label="Contact">
+            <nav class="cv-language-switch" aria-label="Language switch">
+              <a href="cv.html" aria-current="page">\o/ cv["labels"]["languages"]["fr"] \o/</a>
+              <a href="cv-en.html">\o/ cv["labels"]["languages"]["en"] \o/</a>
+            </nav>
+            <p>\o/ cv["tel"] \o/</p>
+            <p><a href="mailto:\o/ cv["mail"] \o/">\o/ cv["mail"] \o/</a></p>
+            <p>\o/ cv["labels"]["born"] \o/ \o/ cv["dob"] \o/</p>
+          </aside>
+        </header>
+
+        /o/ for section in cv["sections"] \o\
+        <section class="cv-section">
+          <h2>\o/ section["name"] \o/</h2>
+
+          /o/ for item in section["items"] \o\
+          <article class="cv-entry">
+            <div class="cv-period">\o/ item["period"] \o/</div>
+            <div class="cv-content">
+              <h3>
+                \o/ item["name"] \o/
+                /o/ if item.get("company") \o\
+                <span>\o/ item["company"] \o/</span>
+                /o/ endif \o\
+                /o/ if item.get("location") \o\
+                <small>\o/ item["location"] \o/</small>
+                /o/ endif \o\
+              </h3>
+
+              /o/ if item.get("items") \o\
+              <ul>
+                /o/ for bullet in item["items"] \o\
+                <li>\o/ bullet \o/</li>
+                /o/ endfor \o\
+                /o/ if item.get("skills") \o\
+                <li class="cv-skills">\o/ item["skills"] | join(", ") \o/</li>
+                /o/ endif \o\
+              </ul>
+              /o/ endif \o\
+            </div>
+          </article>
+          /o/ endfor \o\
+        </section>
+        /o/ endfor \o\
+      </article>
+    </main>
+
+/o/ endcall \o\

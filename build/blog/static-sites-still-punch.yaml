@@ -1,0 +1,19 @@
+post:
+  title: Static Sites Still Punch Above Their Weight
+  slug: static-sites-still-punch
+  published_on: 2026-05-28
+  reading_time: 3 min read
+  summary: Why a small static publishing pipeline still beats a larger stack for personal writing.
+  tags:
+    - web
+    - publishing
+    - jinja
+  sections:
+    - heading: Less surface, fewer surprises
+      paragraphs:
+        - Personal publishing does not need an admin panel, a database, and three background workers. Most of the time it needs plain files, predictable builds, and output that can be served anywhere.
+        - Static generation trims the number of moving parts, which means fewer late-night questions about state, cache invalidation, or which service quietly drifted out of sync.
+    - heading: Source files should stay portable
+      paragraphs:
+        - I like content formats that survive tool churn. YAML is not the only answer, but it is readable, diffable, and easy to reshape when the template layer changes.
+        - If a post is just data in a folder, migration stops being a project and becomes a script.

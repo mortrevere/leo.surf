@@ -1,0 +1,24 @@
+<footer class="site-footer" aria-label="Site footer">
+  <div class="site-frame">
+    <p class="site-footnote">Minimal notes and examples.</p>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const checkbox = document.querySelector("#darkmode");
+    const label = document.querySelector("#darkmode_label");
+
+    const saved = localStorage.getItem("darkmode");
+    if (saved !== null) {
+      checkbox.checked = saved === "true";
+    }
+
+    label.innerHTML = checkbox.checked ? "🌘" : "🌒";
+
+    checkbox.addEventListener("change", function () {
+      localStorage.setItem("darkmode", checkbox.checked);
+      label.innerHTML = checkbox.checked ? "🌘" : "🌒";
+    });
+  });
+</script>

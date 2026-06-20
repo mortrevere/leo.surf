@@ -1,0 +1,73 @@
+/o/ set posts_ns = namespace(items=[]) \o\
+/o/ for path, _content in src.items() \o\
+/o/ if path[:5] == "blog/" and path[-5:] == ".yaml" \o\
+/o/ set post = _o_["load_yaml"](path)["post"] \o\
+/o/ set posts_ns.items = posts_ns.items + [post] \o\
+/o/ endif \o\
+/o/ endfor \o\
+/o/ set posts = posts_ns.items | sort(attribute="published_on", reverse=true) \o\
+
+/o/ call page_shell("blog") \o\
+  <main class="site-main" aria-label="Main content">
+    <article class="blog-index">
+      <header class="blog-hero site-frame">
+        <p class="projects-kicker">blog</p>
+        <h1>Notes, build logs, and field reports.</h1>
+        <p>Posts are authored as YAML in <code>src/blog/</code> and rendered into static pages.</p>
+      </header>
+
+      <section class="site-frame blog-list" aria-label="Blog posts">
+        /o/ for post in posts \o\
+        <article class="blog-card">
+          <p class="blog-meta">\o/ post["published_on"] \o/ · \o/ post["reading_time"] \o/</p>
+          <h2><a href="blog-\o/ post["slug"] \o/.html">\o/ post["title"] \o/</a></h2>
+          <p>\o/ post["summary"] \o/</p>
+          /o/ if post.get("tags") \o\
+          <ul class="blog-tags" aria-label="Tags">
+            /o/ for tag in post["tags"] \o\
+            <li>\o/ tag \o/</li>
+            /o/ endfor \o\
+          </ul>
+          /o/ endif \o\
+        </article>
+        /o/ endfor \o\
+      </section>
+    </article>
+  </main>
+/o/ endcall \o\
+
+/o/ for post in posts \o\
+\o/ _o_["start_page"]("blog-" ~ post["slug"]) \o/
+/o/ call page_shell("blog", post["title"] ~ " / leo.surf") \o\
+<main class="site-main" aria-label="Main content">
+  <article class="blog-post site-frame">
+    <p class="blog-back"><a href="blog.html">Back to blog</a></p>
+    <header class="blog-post-header">
+      <p class="blog-meta">\o/ post["published_on"] \o/ · \o/ post["reading_time"] \o/</p>
+      <h1>\o/ post["title"] \o/</h1>
+      <p class="blog-summary">\o/ post["summary"] \o/</p>
+      /o/ if post.get("tags") \o\
+      <ul class="blog-tags" aria-label="Tags">
+        /o/ for tag in post["tags"] \o\
+        <li>\o/ tag \o/</li>
+        /o/ endfor \o\
+      </ul>
+      /o/ endif \o\
+    </header>
+
+    /o/ for section in post["sections"] \o\
+    <section class="blog-section">
+      /o/ if section.get("heading") \o\
+      <h2>\o/ section["heading"] \o/</h2>
+      /o/ endif \o\
+
+      /o/ for paragraph in section["paragraphs"] \o\
+      <p>\o/ paragraph \o/</p>
+      /o/ endfor \o\
+    </section>
+    /o/ endfor \o\
+  </article>
+</main>
+/o/ endcall \o\
+\o/ _o_["end_page"]() \o/
+/o/ endfor \o\
