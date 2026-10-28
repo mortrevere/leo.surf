@@ -1,24 +1,4 @@
 projects:
-- name: Hyperion
-  description: |
-    Self-hosted replacement for the Philips Hue app, without the bugs and limitations.
-  links: 
-    - name: GitHub
-      target: https://github.com/mortrevere/hyperion
-- name: autobackup
-  description: |
-    Portable Windows/Linux Go wrapper for rsync to automate backups over SSH. Built for speed and correctness against problematic file trees such as audio sample libraries.  
-  links: 
-    - name: GitHub
-      target: https://github.com/mortrevere/autobackup
-- name: Romejko
-  description: |
-    Hardware video synthesizer based on glyphs, outputs VGA. You can even buy it !
-  links:
-    - name: Website
-      target: https://leshauts.xyz/romejko/
-    - name: beLow industries
-      target: https://below.industries/romejko.html
 - name: NixOS
   description: |
     NixOS configuration for my work laptop and three home servers.
@@ -31,16 +11,79 @@ projects:
   links: 
     - name: GitHub
       target: https://github.com/mortrevere/infrastructure
-- name: beLow collective
+- name: autobackup
   description: |
-    A 6-person collective doing scenography, digital arts and a record label, which I co-founded in 2017. 
-    Combining skills and passion from long-time friends as well as ones made along the way, which, over the years, has resulted in productions I am very proud of. 
-  probe_url: https://below.black/
+    Portable Windows/Linux Go wrapper for rsync to automate backups over SSH. Built for speed and correctness against problematic file trees such as audio sample libraries.  
+  links: 
+    - name: GitHub
+      target: https://github.com/mortrevere/autobackup
+- name: Within Frame
+  description: |
+    Camera-based art installation software using OpenCV and YOLO26 to detect people and dogs, select a video stream, and frame tracked subjects.
   links:
-  - name: Website
-    target: https://below.black/
-  - name: GitHub
-    target: https://github.com/mortrevere/below.black
+    - name: GitHub
+      target: https://github.com/beLow-Industries/within-frame
+- name: Romejko
+  description: |
+    Hardware video synthesizer based on glyphs, outputs VGA. You can even buy it !
+  links:
+    - name: Website
+      target: https://leshauts.xyz/romejko/
+    - name: beLow industries
+      target: https://below.industries/romejko.html
+- name: Jinjapocalypse
+  description: |
+    Two-pass templating engine based on Jinja, with a twist on syntax and automatic image optimization. I'm using it to manage all of my static websites. 
+  links: 
+    - name: GitHub
+      target: https://github.com/mortrevere/jinjapocalypse
+# - name: yoko.cat
+#   description: |
+#     See pictures of my cat Yoko at any time of the day. Uses YOLO26 and a webcam pointed at its cat flap to send me notifications and display where he is (inside/outside).
+#   probe_url: https://yoko.cat/
+#   links: 
+#     - name: Website
+#       target: https://yoko.cat/
+#     - name: GitHub
+#       target: https://github.com/mortrevere/yoko.cat
+- name: estcequilfaitchaud.fr
+  description: |
+    Heat-wave coping mechanism that answers the "is it hot right now ?" question for France, and displays current temperature in major french cities. 
+  probe_url: https://estcequilfaitchaud.fr/
+  links: 
+    - name: Website
+      target: https://estcequilfaitchaud.fr/
+- name: patvs
+  description: |
+    Portable All Terrain Video Streamer.
+  links:
+    - name: GitHub
+      target: https://github.com/mortrevere/patvs
+- name: codex-container
+  description: |
+    Run the Codex CLI in disposable containers with configurable profiles.
+  links:
+    - name: GitHub
+      target: https://github.com/mortrevere/codex-container
+- name: Magichien
+  description: |
+    Playing card game builder that assembles frames, numbers, and faces from PNG assets, with defaults for the Magichien game using Scriptorium artwork.
+  links:
+    - name: GitHub
+      target: https://github.com/mortrevere/magichien-builder
+- name: EnlargeYourFrench
+  description: |
+    A chat-based game where, given a list of definitions, you score when you are the first one to find the exact word.
+    Very fun, supports both Discord and Mattermost. 
+  links: 
+    - name: GitHub
+      target: https://github.com/mortrevere/EnlargeYourFrench
+- name: Hyperion
+  description: |
+    Self-hosted replacement for the Philips Hue app, without the bugs and limitations.
+  links: 
+    - name: GitHub
+      target: https://github.com/mortrevere/hyperion
 - name: Les Hauts
   description: |
     My musical identity with which I produce music, perform live with my synthesizers, and DJ with vinyl records.
@@ -58,6 +101,16 @@ projects:
     target: https://www.discogs.com/artist/8320425-Les-Hauts
   - name: Website
     target: https://leshauts.xyz/
+- name: beLow collective
+  description: |
+    A 6-person collective doing scenography, digital arts and a record label, which I co-founded in 2017. 
+    Combining skills and passion from long-time friends as well as ones made along the way, which, over the years, has resulted in productions I am very proud of. 
+  probe_url: https://below.black/
+  links:
+  - name: Website
+    target: https://below.black/
+  - name: GitHub
+    target: https://github.com/mortrevere/below.black
 - name: beLow Industries
   description: |
     Electronic hardware shop derived from the beLow collective, designed to be a home for any independent electronics maker.
@@ -67,32 +120,3 @@ projects:
     target: https://below.industries/
   - name: GitHub
     target: https://github.com/beLow-Industries/below.industries
-- name: jinjapocalypse
-  description: |
-    Two-pass templating engine based on Jinja, with a twist on syntax and automatic image optimization. I'm using it to manage all of my static websites. 
-  links: 
-    - name: GitHub
-      target: https://github.com/mortrevere/jinjapocalypse
-- name: EnlargeYourFrench
-  description: |
-    A chat-based game where, given a list of definitions, you score when you are the first one to find the exact word.
-    Very fun, supports both Discord and Mattermost. 
-  links: 
-    - name: GitHub
-      target: https://github.com/mortrevere/EnlargeYourFrench
-- name: yoko.cat
-  description: |
-    See pictures of my cat Yoko at any time of the day. Uses YOLO26 and a webcam pointed at its cat flap to send me notifications and display where he is (inside/outside).
-  probe_url: https://yoko.cat/
-  links: 
-    - name: Website
-      target: https://yoko.cat/
-    - name: GitHub
-      target: https://github.com/mortrevere/yoko.cat
-- name: estcequilfaitchaud.fr
-  description: |
-    Heat-wave coping mechanism that answers the "is it hot right now ?" question for France, and displays current temperature in major french cities. 
-  probe_url: https://estcequilfaitchaud.fr/
-  links: 
-    - name: Website
-      target: https://estcequilfaitchaud.fr/
