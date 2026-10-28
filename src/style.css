@@ -438,26 +438,6 @@ p a:hover {
   margin: 0;
 }
 
-.cv-language-switch {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.6rem;
-  margin-bottom: 0.9rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.cv-language-switch a {
-  color: var(--color-muted);
-}
-
-.cv-language-switch a[aria-current="page"] {
-  color: var(--color-text);
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-}
-
 .cv-section {
   display: grid;
   grid-template-columns: 9rem minmax(0, 1fr);
@@ -633,10 +613,6 @@ p a:hover {
   .cv-contact {
     margin-top: 1rem;
     text-align: left;
-  }
-
-  .cv-language-switch {
-    justify-content: flex-start;
   }
 
   .cv-section,

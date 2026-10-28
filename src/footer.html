@@ -9,16 +9,18 @@
     const checkbox = document.querySelector("#darkmode");
     const label = document.querySelector("#darkmode_label");
 
-    const saved = localStorage.getItem("darkmode");
-    if (saved !== null) {
-      checkbox.checked = saved === "true";
-    }
+    try {
+      const saved = localStorage.getItem("darkmode");
+      if (saved !== null) checkbox.checked = saved === "true";
+    } catch {}
 
     label.innerHTML = checkbox.checked ? "🌘" : "🌒";
 
     checkbox.addEventListener("change", function () {
-      localStorage.setItem("darkmode", checkbox.checked);
       label.innerHTML = checkbox.checked ? "🌘" : "🌒";
+      try {
+        localStorage.setItem("darkmode", checkbox.checked);
+      } catch {}
     });
   });
 </script>

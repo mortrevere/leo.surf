@@ -15,10 +15,6 @@ print-%:
 	@echo -e '\033[32m$*\033[0m = $($*)'
 .PHONY: print-%
 
-lint: ## lint project
-	@true
-.PHONY: lint
-
 clean: ## delete any build
 	rm -rf build
 .PHONY: clean

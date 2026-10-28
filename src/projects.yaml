@@ -89,14 +89,12 @@ projects:
     My musical identity with which I produce music, perform live with my synthesizers, and DJ with vinyl records.
   probe_url: https://leshauts.xyz/
   links:
-  - name: Instagram
-    target: https://test.com/
   - name: Bandcamp
     target: https://leshauts.bandcamp.com
   - name: Spotify
-    target: https://test.com/
+    target: https://open.spotify.com/artist/20xHWArNiydQFFrMRZG8Uy
   - name: Deezer
-    target: https://test.com/
+    target: https://www.deezer.com/us/artist/92368572
   - name: Discogs
     target: https://www.discogs.com/artist/8320425-Les-Hauts
   - name: Website
