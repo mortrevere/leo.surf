@@ -12,23 +12,26 @@ cv:
       company: Sekoia.io
       location: Rennes
       period: since Jan. 2026
-      description: "Internal re-org split day-to-day management (EMs per domain) from technical steering (IC Principals on tech strategy and building); I chose the latter." # Optional paragraph between the heading and list.
+      description: "Internal re-org split day-to-day management (EMs per domain) from technical steering (IC Principals on tech strategy and building); I chose the latter."
       items:
       - Hired an engineering manager to handle day-to-day team operations and career management
       - Technical leadership of the infrastructure
       - Alignment of squads and organization through the strategic committee
-      - Designed and implemented the new Self-Hosted product
+      - "Designed and implemented the new Self-Hosted product: release management, S3 delivery, full TUI including platform installation, upgrades, monitoring over > 50 microservices and > 20 databases"
       - Automated and adapted cloud deployments for air-gapped environments
+      - "Implementing a QoS framework accross all cloud regions: per microservice automated dashboard deployments, alerting rules, SLO"
+      - "Various strategic topics: ADRs, alignement, implementation or squad alignement"
       skills:
       - Ansible Runner
       - k3s
+      - ArgoCD
       - Air-gap
       - Strategy
     - name: Head of Infrastructure
       company: Sekoia.io
       location: Rennes
       period: 3 years, 2022-2025
-      description: A mix of intense SRE work, team management, and external coordination 
+      description: A mix of intense SRE work, team management, and external coordination
       items:
       - Opened 6 independent cloud regions across OVH, Azure, Akamai, and SecNumCloud
       - Developed, deployed, and integrated an isolated region on S3NS
