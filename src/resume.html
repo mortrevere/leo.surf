@@ -1,15 +1,11 @@
-/o/ call page_shell("cv") \o\
+/o/ call page_shell("resume") \o\
 
     <main class="site-main" aria-label="Main content">
-      /o/ set cv = _o_["load_yaml"]("cv-fr.yaml")["cv"] \o\
+      /o/ set cv = _o_["load_yaml"]("resume.yaml")["cv"] \o\
       <article class="cv-page">
         <header class="cv-hero">
           <h1>\o/ cv["name"] \o/</h1>
           <aside class="cv-contact" aria-label="Contact">
-            <nav class="cv-language-switch" aria-label="Language switch">
-              <a href="cv.html" aria-current="page">\o/ cv["labels"]["languages"]["fr"] \o/</a>
-              <a href="cv-en.html">\o/ cv["labels"]["languages"]["en"] \o/</a>
-            </nav>
             <p>\o/ cv["tel"] \o/</p>
             <p><a href="mailto:\o/ cv["mail"] \o/">\o/ cv["mail"] \o/</a></p>
             <p>\o/ cv["labels"]["born"] \o/ \o/ cv["dob"] \o/</p>
@@ -33,6 +29,10 @@
                 <small>\o/ item["location"] \o/</small>
                 /o/ endif \o\
               </h3>
+
+              /o/ if item.get("description") \o\
+              <p class="cv-description">\o/ item["description"] \o/</p>
+              /o/ endif \o\
 
               /o/ if item.get("items") \o\
               <ul>

@@ -531,6 +531,14 @@ p a:hover {
   content: ".";
 }
 
+.cv-description {
+  margin: 0 0 0.5rem;
+  color: var(--color-muted);
+  font-family: var(--font-sans);
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
 .cv-content ul {
   margin: 0;
   padding: 0;

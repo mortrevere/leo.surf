@@ -5,9 +5,6 @@ cv:
   tel: 06 84 32 16 60
   labels:
     born: Born on
-    languages:
-      fr: FR
-      en: EN
   sections:
   - name: Professional Experience
     items:
@@ -15,6 +12,7 @@ cv:
       company: Sekoia.io
       location: Rennes
       period: since Jan. 2026
+      description: "Internal re-org split day-to-day management (EMs per domain) from technical steering (IC Principals on tech strategy and building); I chose the latter." # Optional paragraph between the heading and list.
       items:
       - Hired an engineering manager to handle day-to-day team operations and career management
       - Technical leadership of the infrastructure
@@ -30,6 +28,7 @@ cv:
       company: Sekoia.io
       location: Rennes
       period: 3 years, 2022-2025
+      description: A mix of intense SRE work, team management, and external coordination 
       items:
       - Opened 6 independent cloud regions across OVH, Azure, Akamai, and SecNumCloud
       - Developed, deployed, and integrated an isolated region on S3NS
@@ -41,12 +40,17 @@ cv:
       - Scaled an Elasticsearch cluster beyond 10 PB
       - Managed vendor relationships with OVH and Akamai
       skills:
-      - Management
-      - AI (OpenAI, vLLM)
+      - Kubernetes
+      - Kafka
       - Elasticsearch
       - Redis / KeyDB
-      - Kafka
-      - Kubernetes
+      - Terraform
+      - Ansible
+      - ArgoCD
+      - Tailscale
+      - Management
+      - LLM integrations (OpenAI, vLLM)
+
     - name: SRE Engineer
       company: Sekoia.io
       location: Rennes
